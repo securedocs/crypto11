@@ -119,9 +119,10 @@ func (c *Context) makeKeyPair(session *pkcs11Session, privHandle *pkcs11.ObjectH
 	keyType := bytesToUlong(attributes[2].Value)
 
 	// Ensure the private key actually has a non-empty CKA_ID to match on
-	if id == nil || len(id) == 0 {
-		return nil, nil, errNoCkaId
-	}
+	//if id == nil || len(id) == 0 {
+	//
+	//	return nil, nil, errNoCkaId
+//	}
 
 	var pubHandle *pkcs11.ObjectHandle
 
